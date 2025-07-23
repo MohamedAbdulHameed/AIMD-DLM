@@ -1,0 +1,5 @@
+num_spin_atoms=108
+tot_num_atoms=216
+spin_flip_time=10 # Unit: fs
+time_step=1 # Unit: fs
+simulation_time=10000 # Unit: fs
