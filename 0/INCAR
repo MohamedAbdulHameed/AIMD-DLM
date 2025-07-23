@@ -1,1 +1,38 @@
+ISTART = 0          # 0: New job. 1/2: Restart.
+ICHARG = 2          # Take superposition of atomic charge densities (default if ISTART = 0).
 
+ENCUT  = 520
+ALGO   = Fast       # Algorithm for electron optimization 
+LASPH  = T          # Include non-spherical contributions to the the density gradient. Essential for accurate energies and band structures of f-elements.
+NELM   = 200        # Max number of electronic steps. The default is usually too small.
+EDIFF  = 1E-04      # Stopping criterion for electronic minimization.
+
+ISMEAR = 1          # Methfessel-Paxton smearing of 1st order.
+SIGMA  = 0.1
+
+ISPIN  = 2
+MAGMOM = 32*0 8*2 8*-2 8*2 8*-2
+
+IBRION = 0          # MD.
+ISYM   = 0          # 0: Switch off the use of symmetry.
+POTIM  = 1          # Timestep in fs.
+MDALGO = 3          # Langevin thermostat.
+ISIF   = 3          # Relax positions, volume and shape.
+TEBEG  = 300        # Initial T
+TEEND  = 300        # Final T
+LANGEVIN_GAMMA   = 100 100      # Damping coeffs of the atomic DOFs of each type.
+LANGEVIN_GAMMA_L = 100          # Damping coeffs of the lattice DOFs.	
+PMASS   = 1000                  # Fictitious mass of the lattice DOFs.
+PSTRESS = 0                     # External P.
+NSW     = 500                   # Max number of ionic steps.
+NBLOCK  = 5                     # Output freq. 
+
+KPAR    = 4
+NCORE   = 14
+ 
+LREAL  = Auto       # Real-space projection. Anton: Slightly less accurate but faster. 
+
+LORBIT = 11         # Files written: DOSCAR and lm-decomposed PROCAR.
+LWAVE  = T
+LCHARG = T 
+LMAXMIX = 6         # Solve for the charge/spin densities of f-elements.
